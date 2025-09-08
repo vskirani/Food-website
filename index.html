@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Week 2</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!--- tailwindcss cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme{
+            --color-primary-orange: #EA6A12;
+            --color-secound-orange: #F09353;
+            --color-orange: #FFF5EE;
+            --color-blue: #07143B;
+            --color-gray: #959895;
+            --color-footer-bg: #9B9B9B;
+        }
+
+       @layer utilities {
+            .font-poppins {
+                font-family: 'Poppins';
+            }
+            
+            .text-hotel-primary {
+                color: #EA6A12;
+            }
+            
+            .bg-hotel-primary {
+                background-color: #EA6A12;
+            }
+            
+            .hover\:bg-hotel-primary:hover {
+                background-color: #EA6A12;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-cover bg-center bg-no-repeat bg-fixed font-poppins" style="background-image: url('./images/Bg-Dashboard.svg')">
+    <!-- Overlay for mobile -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"></div>
+    
+    <!-- Sidebar -->
+    <div id="sidebar" class="fixed left-0 top-0 h-full bg-white shadow-lg z-50 transition-all duration-300 w-16" data-expanded="false">
+        <!-- Sidebar Header -->
+        <div class="p-4 border-b border-gray-200">
+            <div class="flex items-center justify-between">
+                <!-- Hamburger Menu Button / Logo -->
+                <div class="flex items-center">
+                    <button id="toggleSidebar" class="w-8 h-8 rounded-lg flex items-center justify-center text-gray-700 hover:bg-gray-100 transition-all duration-200 flex-shrink-0">
+                        <!-- Icon Hamburger (visible when collapsed) -->
+                        <img id="hamburgerIcon" src="./images/Logo-web.svg" alt="Logo" class="w-6 h-6 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <!-- Logo (hidden when collapsed) -->
+                        <img id="fullLogo" src="./images/Logo-web.svg" alt="Logo" class="w-6 h-6 opacity-0 absolute transition-opacity duration-300">
+                    </button>
+                    
+                    <!-- Logo Text (Hidden when collapsed) -->
+                    <div id="logoText" class="ml-3 opacity-0 transform scale-0 transition-all duration-300 overflow-hidden whitespace-nowrap">
+                        <img src="./images/Logo.svg" alt="Aprycot" class="h-8">
+                    </div>
+                </div>
+                
+                <!-- Close Button (Hidden when collapsed) -->
+                <button id="closeSidebar" class="text-gray-500 hover:text-gray-700 opacity-0 lg:opacity-0 transform scale-0 transition-all duration-300 lg:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <div class="flex flex-col overflow-y-auto py-4">
+            <!-- Home -->
+            <p class="px-4 text-xs font-semibold text-gray-400 uppercase tracking-wider o overflow-hidden whitespace-nowrap">home</p>
+
+            <!-- Dashboard  -->
+            <div class="px-4 mb-2 py-2">
+                <a href="#" class="flex items-center p-2 text-hotel-primary bg-orange-50 rounded-lg transition-colors group">
+                    <img src="./images/icon/Dashboard.svg" alt="" class="w-5 h-5">
+                    <span class="font-poppins text-[16px] text-gray font-regular ml-3 overflow-hidden ">Dashboard</span>
+                </a>
+            </div>
+
+            <!-- Pages Section -->
+            <div class="px-4 mt-2 mb-2">
+                <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider opacity-0 transform scale-0 transition-all duration-300 overflow-hidden whitespace-nowrap">Pages</p>
+            </div>
+
+            <!-- Special Pages -->
+            <div class="px-4 mb-2">
+                <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors group">
+                    <img src="./images/icon/specialpage.svg" alt="" class="w-5 h-5">
+                    <span class="ml-3 font-medium opacity-0 transform scale-0 transition-all duration-300 overflow-hidden whitespace-nowrap">Special Pages</span>
+                </a>
+            </div>
+
+            <!-- Authentication -->
+            <div class="px-4 mb-2">
+                <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors group">
+                    <img src="./images/icon/auth.svg" alt="" class="w-5 h-5">
+                    <span class="ml-3 font-medium opacity-0 transform scale-0 transition-all duration-300 overflow-hidden whitespace-nowrap">Authentication</span>
+                </a>
+            </div>
+
+            <!-- Users -->
+            <div class="px-4 mb-2">
+                <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors group">
+                    <img src="./images/icon/widget.svg" alt="" class="w-5 h-5">
+                    <span class="ml-3 font-medium opacity-0 transform scale-0 transition-all duration-300 overflow-hidden whitespace-nowrap">Users</span>
+                </a>
+            </div>
+
+            <!-- Utilities -->
+            <div class="px-4 mb-2">
+                <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors group">
+                    <img src="./images/icon/utilities.svg" alt="" class="w-5 h-5">
+                    <span class="ml-3 font-medium opacity-0 transform scale-0 transition-all duration-300 overflow-hidden whitespace-nowrap">Utilities</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="mainContent" class="ml-16 transition-all duration-300 min-h-screen">
+        <div class="p-8">
+            <h1 class="text-3xl font-bold text-white">Dashboard Content</h1>
+            <p class="text-white mt-4">Your main content goes here...</p>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.getElementById('sidebar');
+            const toggleSidebar = document.getElementById('toggleSidebar');
+            const closeSidebar = document.getElementById('closeSidebar');
+            const overlay = document.getElementById('overlay');
+            const mainContent = document.getElementById('mainContent');
+            const logoText = document.getElementById('logoText');
+            const hamburgerIcon = document.getElementById('hamburgerIcon');
+            const fullLogo = document.getElementById('fullLogo');
+            
+            // Get all text elements that should be hidden/shown
+            const textElements = sidebar.querySelectorAll('span:not([id^="tooltip-"])');
+            const categoryLabels = sidebar.querySelectorAll('p.text-xs.font-semibold');
+
+            // PERUBAHAN: Mulai dengan collapsed di semua device (desktop dan mobile)
+            let isExpanded = false;
+
+            // Set initial collapsed state
+            function setInitialState() {
+                // Sidebar collapsed
+                sidebar.classList.remove('w-64');
+                sidebar.classList.add('w-16');
+                sidebar.setAttribute('data-expanded', 'false');
+                
+                // Main content margin
+                mainContent.classList.remove('ml-64');
+                mainContent.classList.add('ml-16');
+                
+                // Show hamburger, hide logo
+                hamburgerIcon.classList.remove('opacity-0');
+                fullLogo.classList.remove('opacity-100');
+                fullLogo.classList.add('opacity-0');
+                
+                // Hide all text elements
+                logoText.classList.remove('opacity-100', 'scale-100');
+                logoText.classList.add('opacity-0', 'scale-0');
+                
+                textElements.forEach(el => {
+                    el.classList.remove('opacity-100', 'scale-100');
+                    el.classList.add('opacity-0', 'scale-0');
+                });
+                
+                categoryLabels.forEach(el => {
+                    el.classList.remove('opacity-100', 'scale-100');
+                    el.classList.add('opacity-0', 'scale-0');
+                });
+                
+                // Hide close button and overlay
+                closeSidebar.classList.remove('opacity-100', 'scale-100');
+                closeSidebar.classList.add('opacity-0', 'scale-0');
+                overlay.classList.add('hidden');
+            }
+
+            function toggleSidebarState() {
+                isExpanded = !isExpanded;
+                
+                if (isExpanded) {
+                    // Expand sidebar
+                    sidebar.classList.remove('w-16');
+                    sidebar.classList.add('w-64');
+                    sidebar.setAttribute('data-expanded', 'true');
+                    
+                    // Update main content margin
+                    mainContent.classList.remove('ml-16');
+                    mainContent.classList.add('ml-64');
+                    
+                    // Change hamburger to logo
+                    hamburgerIcon.classList.add('opacity-0');
+                    fullLogo.classList.remove('opacity-0');
+                    fullLogo.classList.add('opacity-100');
+                    
+                    // Show text elements
+                    setTimeout(() => {
+                        logoText.classList.remove('opacity-0', 'scale-0');
+                        logoText.classList.add('opacity-100', 'scale-100');
+                        
+                        textElements.forEach(el => {
+                            el.classList.remove('opacity-0', 'scale-0');
+                            el.classList.add('opacity-100', 'scale-100');
+                        });
+                        
+                        categoryLabels.forEach(el => {
+                            el.classList.remove('opacity-0', 'scale-0');
+                            el.classList.add('opacity-100', 'scale-100');
+                        });
+                        
+                        // Show close button on mobile
+                        if (window.innerWidth < 1024) {
+                            closeSidebar.classList.remove('opacity-0', 'scale-0');
+                            closeSidebar.classList.add('opacity-100', 'scale-100');
+                            overlay.classList.remove('hidden');
+                        }
+                    }, 150);
+                    
+                } else {
+                    // Collapse sidebar
+                    sidebar.classList.remove('w-64');
+                    sidebar.classList.add('w-16');
+                    sidebar.setAttribute('data-expanded', 'false');
+                    
+                    // Update main content margin
+                    mainContent.classList.remove('ml-64');
+                    mainContent.classList.add('ml-16');
+                    
+                    // Change back to hamburger icon
+                    hamburgerIcon.classList.remove('opacity-0');
+                    fullLogo.classList.remove('opacity-100');
+                    fullLogo.classList.add('opacity-0');
+                    
+                    // Hide text elements
+                    logoText.classList.remove('opacity-100', 'scale-100');
+                    logoText.classList.add('opacity-0', 'scale-0');
+                    
+                    textElements.forEach(el => {
+                        el.classList.remove('opacity-100', 'scale-100');
+                        el.classList.add('opacity-0', 'scale-0');
+                    });
+                    
+                    categoryLabels.forEach(el => {
+                        el.classList.remove('opacity-100', 'scale-100');
+                        el.classList.add('opacity-0', 'scale-0');
+                    });
+                    
+                    // Hide close button and overlay
+                    closeSidebar.classList.remove('opacity-100', 'scale-100');
+                    closeSidebar.classList.add('opacity-0', 'scale-0');
+                    overlay.classList.add('hidden');
+                }
+            }
+
+            // Set initial collapsed state when page loads
+            setInitialState();
+
+            // Event listeners
+            toggleSidebar.addEventListener('click', toggleSidebarState);
+            closeSidebar.addEventListener('click', toggleSidebarState);
+            overlay.addEventListener('click', toggleSidebarState);
+
+            // Handle window resize - TIDAK AUTO EXPAND di desktop
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 1024) {
+                    // Desktop: Hide mobile elements tapi tetap biarkan user control expand/collapse
+                    overlay.classList.add('hidden');
+                    closeSidebar.classList.remove('opacity-100', 'scale-100');
+                    closeSidebar.classList.add('opacity-0', 'scale-0');
+                } else {
+                    // Mobile: Auto collapse jika expanded
+                    if (isExpanded) {
+                        toggleSidebarState();
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
