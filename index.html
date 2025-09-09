@@ -195,44 +195,44 @@
                 <!-- category icon -->
                 <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
                     <!-- Category Item -->
-                    <div class="flex flex-col items-center">
-                        <div class=" p-0 rounded-full mb-2 hover:bg-orange-200 transition-colors duration-300">
-                            <img src="./images/item/pizza.svg" alt="" class="w-full h-full">
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div class=" p-0 rounded-full mb-2  transition-colors duration-300">
+                            <img src="./images/item/pizza.svg" alt="" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300">
                         </div>
                         <p class="font-poppins text-[12px] text-blue font-medium">Pizza</p>
                     </div>
 
-                    <div class="flex flex-col items-center">
-                        <div class=" p-0 rounded-full mb-2 hover:bg-orange-200 transition-colors duration-300">
-                            <img src="./images/item/fruits.svg" alt="" class="w-full h-full">
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div class=" p-0 rounded-full mb-2  transition-colors duration-300">
+                            <img src="./images/item/fruits.svg" alt="" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300">
                         </div>
                         <p class="font-poppins text-[12px] text-blue font-medium">Fruits</p>
                     </div>
 
-                    <div class="flex flex-col items-center">
-                        <div class=" p-0 rounded-full mb-2 hover:bg-orange-200 transition-colors duration-300">
-                            <img src="./images/item/snack.svg" alt="" class="w-full h-full">
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div class=" p-0 rounded-full mb-2  transition-colors duration-300">
+                            <img src="./images/item/snack.svg" alt="" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300">
                         </div>
                         <p class="font-poppins text-[12px] text-blue font-medium">Snack</p>
                     </div>
 
-                    <div class="flex flex-col items-center">
-                        <div class=" p-0 rounded-full mb-2 hover:bg-orange-200 transition-colors duration-300">
-                            <img src="./images/item/veggies.svg" alt="" class="w-full h-full">
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div class=" p-0 rounded-full mb-2  transition-colors duration-300">
+                            <img src="./images/item/veggies.svg" alt="" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300">
                         </div>
                         <p class="font-poppins text-[12px] text-blue font-medium">Veggies</p>
                     </div>
 
-                    <div class="flex flex-col items-center">
-                        <div class=" p-0 rounded-full mb-2 hover:bg-orange-200 transition-colors duration-300">
-                            <img src="./images/item/burger.svg" alt="" class="w-full h-full">
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div class=" p-0 rounded-full mb-2  transition-colors duration-300">
+                            <img src="./images/item/burger.svg" alt="" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300">
                         </div>
                         <p class="font-poppins text-[12px] text-blue font-medium">Burger</p>
                     </div>
 
-                    <div class="flex flex-col items-center">
-                        <div class=" p-0 rounded-full mb-2 hover:bg-orange-200 transition-colors duration-300">
-                            <img src="./images/item/drink.svg" alt="" class="w-full h-full">
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div class=" p-0 rounded-full mb-2  transition-colors duration-300">
+                            <img src="./images/item/drink.svg" alt="" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300">
                         </div>
                         <p class="font-poppins text-[12px] text-blue font-medium">Drink</p>
                     </div>
@@ -399,6 +399,7 @@
                 </div>
             </div>
 
+            <!-- trending order -->
             <div class="w-full lg:col-span-2">
                 <div class="flex flex-row justify-between items-center mb-4">
                     <p class="font-fairplay text-[24px] font-bold text-blue">Trending Orders</p>
@@ -408,6 +409,7 @@
                     </div>
                 </div>
                 
+                <!-- item -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Trending Order Card -->
                     <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
@@ -444,14 +446,189 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- card 2 -->
+                    <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        
+                        <div class="flex items-center mb-4">
+                            <span class="text-primary-orange text-[20px] mr-2">👑</span>
+                            <span class="text-primary-orange text-[14px] font-medium">Top of the day</span>
+                        </div>
+                        
+                        <!-- Content Layout -->
+                        <div class="flex items-center justify-between">
+                            <!-- Left Content -->
+                            <div class="flex-1">
+                                <h3 class="text-[20px] font-bold text-gray-900 mb-3">Italian Salad</h3>
+                                
+                                <div class="space-y-2 mb-6">
+                                    <p class="text-gray-500 text-[14px]">50 Calories</p>
+                                    <p class="text-gray-500 text-[14px]">4 persons</p>
+                                </div>
+                                
+                                <!-- Price and Button -->
+                                <div class="flex items-center space-x-4">
+                                    <p class="text-primary-orange text-[16px] font-bold">Rp. 25.000</p>
+                                    <button class="flex items-center justify-center hover:scale-110">
+                                        <img src="./images/icon/add.svg" alt="Add" class="w-5 h-5">
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Image -->
+                            <div class="ml-6">
+                                   
+                                    <img src="./images/salad2.svg" alt="" class="w-32 h-32  flex items-center justify-center relative overflow-hidden">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 3 -->
+                     <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        
+                        <div class="flex items-center mb-4">
+                            <span class="text-primary-orange text-[20px] mr-2">👑</span>
+                            <span class="text-primary-orange text-[14px] font-medium">Top of the month</span>
+                        </div>
+                        
+                        <!-- Content Layout -->
+                        <div class="flex items-center justify-between">
+                            <!-- Left Content -->
+                            <div class="flex-1">
+                                <h3 class="text-[20px] font-bold text-gray-900 mb-3">Italian Salad</h3>
+                                
+                                <div class="space-y-2 mb-6">
+                                    <p class="text-gray-500 text-[14px]">100 Calories</p>
+                                    <p class="text-gray-500 text-[14px]">4 persons</p>
+                                </div>
+                                
+                                <!-- Price and Button -->
+                                <div class="flex items-center space-x-4">
+                                    <p class="text-primary-orange text-[16px] font-bold">Rp. 25.000</p>
+                                    <button class="flex items-center justify-center hover:scale-110">
+                                        <img src="./images/icon/add.svg" alt="Add" class="w-5 h-5">
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Image -->
+                            <div class="ml-6">
+                                    <img src="./images/salad3.svg" alt="" class="w-32 h-32  flex items-center justify-center relative overflow-hidden">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        
+                        <div class="flex items-center mb-4">
+                            <span class="text-primary-orange text-[20px] mr-2">👑</span>
+                            <span class="text-primary-orange text-[14px] font-medium">Top of the day</span>
+                        </div>
+                        
+                        <!-- Content Layout -->
+                        <div class="flex items-center justify-between">
+                            <!-- Left Content -->
+                            <div class="flex-1">
+                                <h3 class="text-[20px] font-bold text-gray-900 mb-3">Italian Salad</h3>
+                                
+                                <div class="space-y-2 mb-6">
+                                    <p class="text-gray-500 text-[14px]">50 Calories</p>
+                                    <p class="text-gray-500 text-[14px]">4 persons</p>
+                                </div>
+                                
+                                <!-- Price and Button -->
+                                <div class="flex items-center space-x-4">
+                                    <p class="text-primary-orange text-[16px] font-bold">Rp. 25.000</p>
+                                    <button class="flex items-center justify-center hover:scale-110">
+                                        <img src="./images/icon/add.svg" alt="Add" class="w-5 h-5">
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Image -->
+                            <div class="ml-6">
+                                   
+                                    <img src="./images/italiansalad.svg" alt="" class="w-32 h-32  flex items-center justify-center relative overflow-hidden">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div>
-                s
+            <!-- categories -->
+            <div class="w-full h-80  rounded-lg shadow-md p-6">
+                <!-- Header -->
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="font-poppins text-xl font-bold text-primary-orange">Menu Category</h2>
+                    <div class="flex items-center gap-2 cursor-pointer group">
+                        <span class="font-poppins text-sm font-medium text-blue group-hover:text-primary-orange transition-colors">view all</span>
+                        <img src="./images/icon/arrow2.svg" alt="" class="w-4 h-4 group-hover:translate-x-1 transition-transform">
+                    </div>
+                </div>
+
+                <!-- Category Pills/Buttons -->
+                <div class="flex flex-wrap gap-3">
+                    <button class="bg-primary-orange hover:bg-secound-orange text-white px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 shadow-md">
+                        Burgers
+                    </button>
+                    <button class="border-1 border-secound-orange hover:border-secound-orange text-primary-orange hover:bg-primary-orange hover:text-white px-5 py-2 rounded-full text-[14px] font-medium transition-all duration-200 hover:scale-105">
+                        Pizza
+                    </button>
+                    <button class="border-1 border-secound-orange hover:border-secound-orange text-primary-orange hover:bg-primary-orange hover:text-white px-5 py-2 rounded-full text-[14px] font-medium transition-all duration-200 hover:scale-105">
+                        Salads
+                    </button>
+                    <button class="border-1 border-secound-orange hover:border-secound-orange text-primary-orange hover:bg-primary-orange hover:text-white px-5 py-2 rounded-full text-[14px] font-medium transition-all duration-200 hover:scale-105">
+                        Drinks
+                    </button>
+                    <button class="border-1 border-secound-orange hover:border-secound-orange text-primary-orange hover:bg-primary-orange hover:text-white px-5 py-2 rounded-full text-[14px] font-medium transition-all duration-200 hover:scale-105">
+                        Snacks
+                    </button>
+                    <button class="border-1 border-secound-orange hover:border-secound-orange text-primary-orange hover:bg-primary-orange hover:text-white px-5 py-2 rounded-full text-[14px] font-medium transition-all duration-200 hover:scale-105">
+                        Veggies
+                    </button>
+                    <button class="border-1 border-secound-orange hover:border-secound-orange text-primary-orange hover:bg-primary-orange hover:text-white px-5 py-2 rounded-full text-[14px] font-medium transition-all duration-200 hover:scale-105">
+                        apayaaa
+                    </button>
+                    <button class="border-1 border-secound-orange hover:border-secound-orange text-primary-orange hover:bg-primary-orange hover:text-white px-5 py-2 rounded-full text-[14px] font-medium transition-all duration-200 hover:scale-105">
+                        Salads buahh
+                    </button>
+                    <button class="border-1 border-secound-orange hover:border-secound-orange text-primary-orange hover:bg-primary-orange hover:text-white px-5 py-2 rounded-full text-[14px] font-medium transition-all duration-200 hover:scale-105">
+                        Drinks
+                    </button>
+                    <button class="border-1 border-secound-orange hover:border-secound-orange text-primary-orange hover:bg-primary-orange hover:text-white px-5 py-2 rounded-full text-[14px] font-medium transition-all duration-200 hover:scale-105">
+                        Snacks
+                    </button>
+                </div>
             </div>
             
         </div>
+
+        <!-- footer -->
+        <!-- footer -->
+<footer class="bg-orange text-blue mt-8 py-8 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <!-- Logo atau Brand -->
+        <div class="flex justify-center items-center mb-4">
+            <img src="./images/Logo.svg" alt="Aprycot" class="h-6">
+        </div>
+        
+        <!-- Copyright -->
+        <p class="text-gray text-sm">&copy; 2025 vskiraniii. All rights reserved.</p>
+        
+        <!-- Optional: Social Media atau Links -->
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="#" class="text-gray hover:text-primary-orange text-sm transition-colors">Privacy Policy</a>
+            <a href="#" class="text-gray hover:text-primary-orange text-sm transition-colors">Terms of Service</a>
+            <a href="#" class="text-gray hover:text-primary-orange text-sm transition-colors">Contact</a>
+        </div>
+    </div>
+</footer>
+
+    </div>
+
+     
 
 
     <script>
