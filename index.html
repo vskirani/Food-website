@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <!--- tailwindcss cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -26,18 +27,10 @@
             .font-poppins {
                 font-family: 'Poppins';
             }
-            
-            .text-hotel-primary {
-                color: #EA6A12;
+            .font-fairplay {
+                font-family: 'Playfair Display';
             }
             
-            .bg-hotel-primary {
-                background-color: #EA6A12;
-            }
-            
-            .hover\:bg-hotel-primary:hover {
-                background-color: #EA6A12;
-            }
         }
     </style>
 </head>
@@ -49,7 +42,7 @@
     <!-- Sidebar -->
     <div id="sidebar" class="fixed left-0 top-0 h-full bg-white shadow-lg z-50 transition-all duration-300 w-16" data-expanded="false">
         <!-- Sidebar Header -->
-        <div class="p-4 border-b border-gray-200">
+        <div class="p-3 border-b border-gray-200">
             <div class="flex items-center justify-between">
                 <!-- Hamburger Menu Button / Logo -->
                 <div class="flex items-center">
@@ -84,7 +77,7 @@
             <div class="px-4 mb-2 py-2">
                 <a href="#" class="flex items-center p-2 text-hotel-primary bg-orange-50 rounded-lg transition-colors group">
                     <img src="./images/icon/Dashboard.svg" alt="" class="w-5 h-5">
-                    <span class="font-poppins text-[16px] text-gray font-regular ml-3 overflow-hidden ">Dashboard</span>
+                    <span class="font-poppins text-[14px] text-gray font-regular ml-3 overflow-hidden ">Dashboard</span>
                 </a>
             </div>
 
@@ -97,7 +90,7 @@
             <div class="px-4 mb-2">
                 <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors group">
                     <img src="./images/icon/specialpage.svg" alt="" class="w-5 h-5">
-                    <span class="ml-3 font-medium opacity-0 transform scale-0 transition-all duration-300 overflow-hidden whitespace-nowrap">Special Pages</span>
+                    <span class="font-poppins text-[14px] text-gray font-regular ml-3 overflow-hidden ">Special Pages</span>
                 </a>
             </div>
 
@@ -105,7 +98,7 @@
             <div class="px-4 mb-2">
                 <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors group">
                     <img src="./images/icon/auth.svg" alt="" class="w-5 h-5">
-                    <span class="ml-3 font-medium opacity-0 transform scale-0 transition-all duration-300 overflow-hidden whitespace-nowrap">Authentication</span>
+                    <span class="font-poppins text-[14px] text-gray font-regular ml-3 overflow-hidden">Authentication</span>
                 </a>
             </div>
 
@@ -113,7 +106,7 @@
             <div class="px-4 mb-2">
                 <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors group">
                     <img src="./images/icon/widget.svg" alt="" class="w-5 h-5">
-                    <span class="ml-3 font-medium opacity-0 transform scale-0 transition-all duration-300 overflow-hidden whitespace-nowrap">Users</span>
+                    <span class="font-poppins text-[14px] text-gray font-regular ml-3 overflow-hidden">Users</span>
                 </a>
             </div>
 
@@ -121,19 +114,345 @@
             <div class="px-4 mb-2">
                 <a href="#" class="flex items-center p-2 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors group">
                     <img src="./images/icon/utilities.svg" alt="" class="w-5 h-5">
-                    <span class="ml-3 font-medium opacity-0 transform scale-0 transition-all duration-300 overflow-hidden whitespace-nowrap">Utilities</span>
+                    <span class="font-poppins text-[14px] text-gray font-regular ml-3 overflow-hidden">Utilities</span>
                 </a>
             </div>
         </div>
     </div>
 
     <!-- Main Content -->
-    <main id="mainContent" class="ml-16 transition-all duration-300 min-h-screen">
-        <div class="p-8">
-            <h1 class="text-3xl font-bold text-white">Dashboard Content</h1>
-            <p class="text-white mt-4">Your main content goes here...</p>
+    <div id="mainContent" class="ml-16  transition-all duration-300 min-h-screen">
+      <!-- navbar -->
+        <div class="flex flex-row w-full bg-white  border-b border-gray-200 p-2">
+            <div class="flex flex-1 items-center  max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+                <div class="relative w-full">
+                    <div class="absolute inset-y-0 left-0 pl-2 md:pl-3 flex items-center pointer-events-none">
+                        <img src="./images/icon/search.svg" alt="Search" class="h-4 w-4 md:h-5 md:w-5 text-gray">
+                    </div>
+                    <input 
+                        type="text" 
+                        id="searchInput"
+                        placeholder="Search..." 
+                        class="block w-full pl-8 md:pl-10 pr-2 md:pr-3 py-1.5 md:py-2 border border-gray-300 rounded-[24px] md:rounded-[28px] leading-5 bg-gray-50 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 md:focus:ring-2 focus:ring-orange focus:border-primary-orange focus:bg-white text-[14px] md:text-[12px]"
+                    >
+                </div>
+            </div>
+            <div class="flex-grow"></div>
+            <div class="flex items-center">
+                <img src="./images/icon/notification.svg" alt="Notifications" class="h-4 w-4 md:h-6 md:w-6 text-gray-600 hover:text-gray-800 cursor-pointer">
+                <img src="./images/icon/message.svg" alt="Messages" class="h-4 w-4 md:h-6 md:w-6 text-gray-600 hover:text-gray-800 cursor-pointer ml-4">
+                <img src="./images/icon/profile.svg" alt="Profile" class="h-6   w-6 md:h-8 md:w-8 text-gray-600 hover:text-gray-800 cursor-pointer ml-4">
+            </div>
         </div>
-    </main>
+
+        <!-- content -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 ">
+            
+            <!-- div welcome -->
+            <div class="w-full h-52  lg:col-span-2 bg-white rounded-lg shadow-md p-10 relative overflow-hidden">
+                <img src="./images/Banners.svg" alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg">
+                <div class="relative z-10 text-left">
+                    <p class="font-poppins text-[13px] font-small text-primary-orange">👑 Deal of the weekend</p>
+                    <p class="font-fairplay text-[24px] font-bold text-blue mt-2">Hello,  Austine Robertson</p>
+                    <p class="font-poppins text-[13px] font-semibold text-gray mt-2">
+                        Get 
+                        <span class="text-primary-orange">FREE delivery</span> 
+                        on every weekend.
+                    </p>
+                    <button class="mt-4 bg-primary-orange text-white px-4 py-1 rounded-full text-[12px] hover:orange hover:shadow-xl hover:scale-105 active:scale-95">
+                        Check Menu
+                </div>
+            </div>
+            
+            <!-- burger -->
+            <div class=" bg-orange rounded-[24px] shadow-md h-52 group hover:shadow-lg transition-shadow duration-300">
+                <div class="flex flex-row justify-between mb-2">
+                    <p class="font-poppins text-[10px] font-semibold mt-4 bg-primary-orange text-white ml-2 px-3 py-1 rounded-[24px]"> 🔥HOT DEAL</p>
+                    <div class="text-right mr-4 mt-4">
+                        <p class="text-primary-orange text-[14px] font-bold">50% <span class="text-gray text-[10px] font-semibold">OFF</span> </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center justify-center">
+                    <img src="./images/item/burger.svg" alt="" class="w-20 h-20 object-contain">
+                    <p class="font-poppins text-[14px] font-semibold text-gray mt-2">Cheese Burger</p>
+                    <p class="font-poppins text-[12px] text-gray line-through">Rp. 20.000</p>
+                    <p class="font-poppins text-[16px] font-bold text-primary-orange">Rp. 10.000</p>
+                </div>
+
+            </div>
+
+            <!-- menu category -->
+            <div class="w-full lg:col-span-2">
+                <div class="flex flex-row justify-between items-center mb-4">
+                    <p class="font-fairplay text-[24px] font-bold text-blue">Menu Category</p>
+                    <div class="flex items-center gap-1 cursor-pointer hover:text-primary-orange transition-colors duration-300">
+                        <p class="font-poppins text-[12px] font-medium text-blue">view all</p>
+                        <img src="./images/icon/arrow2.svg" alt="" class="w-4 h-4 text-blue hover:text-primary-orange transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    </div>
+                </div>
+                
+                <!-- category icon -->
+                <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <!-- Category Item -->
+                    <div class="flex flex-col items-center">
+                        <div class=" p-0 rounded-full mb-2 hover:bg-orange-200 transition-colors duration-300">
+                            <img src="./images/item/pizza.svg" alt="" class="w-full h-full">
+                        </div>
+                        <p class="font-poppins text-[12px] text-blue font-medium">Pizza</p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class=" p-0 rounded-full mb-2 hover:bg-orange-200 transition-colors duration-300">
+                            <img src="./images/item/fruits.svg" alt="" class="w-full h-full">
+                        </div>
+                        <p class="font-poppins text-[12px] text-blue font-medium">Fruits</p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class=" p-0 rounded-full mb-2 hover:bg-orange-200 transition-colors duration-300">
+                            <img src="./images/item/snack.svg" alt="" class="w-full h-full">
+                        </div>
+                        <p class="font-poppins text-[12px] text-blue font-medium">Snack</p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class=" p-0 rounded-full mb-2 hover:bg-orange-200 transition-colors duration-300">
+                            <img src="./images/item/veggies.svg" alt="" class="w-full h-full">
+                        </div>
+                        <p class="font-poppins text-[12px] text-blue font-medium">Veggies</p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class=" p-0 rounded-full mb-2 hover:bg-orange-200 transition-colors duration-300">
+                            <img src="./images/item/burger.svg" alt="" class="w-full h-full">
+                        </div>
+                        <p class="font-poppins text-[12px] text-blue font-medium">Burger</p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class=" p-0 rounded-full mb-2 hover:bg-orange-200 transition-colors duration-300">
+                            <img src="./images/item/drink.svg" alt="" class="w-full h-full">
+                        </div>
+                        <p class="font-poppins text-[12px] text-blue font-medium">Drink</p>
+                    </div>
+
+                    
+                </div>
+
+                <!-- menu category bawah -->
+                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-4">
+                     <!-- Menu Card 1 -->
+                    <div class="flex flex-col p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <!-- Image Container -->
+                        <div class="w-full h-32 mb-3 flex items-center justify-center overflow-hidden rounded-lg">
+                            <img src="./images/Spaghetti.svg" alt="Spaghetti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="flex flex-col flex-1">
+                            <!-- Title -->
+                            <h3 class="font-poppins text-[14px] font-medium text-blue mb-2">Spaghetti</h3>
+                            
+                            <!-- Rating -->
+                            <div class="flex text-secound-orange text-lg">★★★★★</div>
+                            
+                            <!-- Price and Add Button -->
+                            <div class="flex justify-between items-center mt-auto">
+                                <p class="font-poppins text-[14px] font-semibold text-primary-orange">Rp. 20.000</p>
+                                <button class="p-2 hover:bg-orange rounded-lg transition-colors duration-300">
+                                    <img src="./images/icon/add.svg" alt="Add to cart" class="w-5 h-5">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Card 1 -->
+                    <div class="flex flex-col p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <!-- Image Container -->
+                        <div class="w-full h-32 mb-3 flex items-center justify-center overflow-hidden rounded-lg">
+                            <img src="./images/Spaghetti.svg" alt="Spaghetti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="flex flex-col flex-1">
+                            <!-- Title -->
+                            <h3 class="font-poppins text-[14px] font-medium text-blue mb-2">Spaghetti</h3>
+                            
+                            <!-- Rating -->
+                            <div class="flex text-secound-orange text-lg">★★★★★</div>
+                            
+                            <!-- Price and Add Button -->
+                            <div class="flex justify-between items-center mt-auto">
+                                <p class="font-poppins text-[14px] font-semibold text-primary-orange">Rp. 20.000</p>
+                                <button class="p-2 hover:bg-orange rounded-lg transition-colors duration-300">
+                                    <img src="./images/icon/add.svg" alt="Add to cart" class="w-5 h-5">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Card 1 -->
+                    <div class="flex flex-col p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <!-- Image Container -->
+                        <div class="w-full h-32 mb-3 flex items-center justify-center overflow-hidden rounded-lg">
+                            <img src="./images/Spaghetti.svg" alt="Spaghetti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="flex flex-col flex-1">
+                            <!-- Title -->
+                            <h3 class="font-poppins text-[14px] font-medium text-blue mb-2">Spaghetti</h3>
+                            
+                            <!-- Rating -->
+                            <div class="flex text-secound-orange text-lg">★★★★★</div>
+                            
+                            <!-- Price and Add Button -->
+                            <div class="flex justify-between items-center mt-auto">
+                                <p class="font-poppins text-[14px] font-semibold text-primary-orange">Rp. 20.000</p>
+                                <button class="p-2 hover:bg-orange rounded-lg transition-colors duration-300">
+                                    <img src="./images/icon/add.svg" alt="Add to cart" class="w-5 h-5">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu Card 1 -->
+                    <div class="flex flex-col p-4  rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                        <!-- Image Container -->
+                        <div class="w-full h-32 mb-3 flex items-center justify-center overflow-hidden rounded-lg">
+                            <img src="./images/Spaghetti.svg" alt="Spaghetti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        
+                        <!-- Content -->
+                        <div class="flex flex-col flex-1">
+                            <!-- Title -->
+                            <h3 class="font-poppins text-[14px] font-medium text-blue mb-2">Spaghetti</h3>
+                            
+                            <!-- Rating -->
+                            <div class="flex text-secound-orange text-lg">★★★★★</div>
+                            
+                            <!-- Price and Add Button -->
+                            <div class="flex justify-between items-center mt-auto">
+                                <p class="font-poppins text-[14px] font-semibold text-primary-orange">Rp. 20.000</p>
+                                <button class="p-2 hover:bg-orange rounded-lg transition-colors duration-300">
+                                    <img src="./images/icon/add.svg" alt="Add to cart" class="w-5 h-5">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>   
+
+            <!-- cart -->
+            <div class="w-full h-full bg-white rounded-lg shadow-md p-4">
+                <p class="font-poppins text-[16px] font-semibold text-primary-orange border-b border-gray-200">My Cart</p>
+                <div class="mt-4 space-y-4 ">
+                    <!-- Cart Item 1 -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="./images/item/burger.svg" alt="Burger" class="w-12 h-12 rounded-lg object-cover">
+                            <div class="ml-4">
+                                <p class="font-poppins text-[14px] font-medium text-blue">Cheese Burger</p>
+                                <p class="font-poppins text-[12px] text-gray">Rp. 10.000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button class="p-2 hover:bg-orange rounded-lg transition-colors duration-300">
+                                <img src="./images/icon/minus.svg" alt="Minus" class="w-5 h-5">
+                            </button>
+                            <p class="font-poppins text-[14px] font-medium text-blue">1</p>
+                            <button class="p-2 hover:bg-orange rounded-lg transition-colors duration-300">
+                                <img src="./images/icon/add.svg" alt="Plus" class="w-5 h-5">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cart Item 1 -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="./images/Spaghetti.svg" alt="" class="w-12 h-12 rounded-lg object-cover">
+                            <div class="ml-4">
+                                <p class="font-poppins text-[14px] font-medium text-blue">Spaghetti</p>
+                                <p class="font-poppins text-[12px] text-gray">Rp. 20.000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button class="p-2 hover:bg-orange rounded-lg transition-colors duration-300">
+                                <img src="./images/icon/minus.svg" alt="Minus" class="w-5 h-5">
+                            </button>
+                            <p class="font-poppins text-[14px] font-medium text-blue">1</p>
+                            <button class="p-2 hover:bg-orange rounded-lg transition-colors duration-300">
+                                <img src="./images/icon/add.svg" alt="Plus" class="w-5 h-5">
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Total Price -->
+                    <div class="flex justify-between items-center border-t border-gray-200 pt-4">
+                        <p class="font-poppins text-[16px] font-semibold text-blue">Total:</p>
+                        <p class="font-poppins text-[16px] font-bold text-primary-orange">Rp. 30.000</p>
+                    </div>
+                    <button class="w-full bg-primary-orange text-white py-2 rounded-full text-[14px] font-semibold hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-300">
+                        Checkout
+                    </button>
+                </div>
+            </div>
+
+            <div class="w-full lg:col-span-2">
+                <div class="flex flex-row justify-between items-center mb-4">
+                    <p class="font-fairplay text-[24px] font-bold text-blue">Trending Orders</p>
+                    <div class="flex items-center gap-1 cursor-pointer hover:text-primary-orange transition-colors duration-300">
+                        <p class="font-poppins text-[12px] font-medium text-blue">view all</p>
+                        <img src="./images/icon/arrow2.svg" alt="" class="w-4 h-4 text-blue hover:text-primary-orange transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Trending Order Card -->
+                    <div class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        
+                        <div class="flex items-center mb-4">
+                            <span class="text-primary-orange text-[20px] mr-2">👑</span>
+                            <span class="text-primary-orange text-[14px] font-medium">Top of the week</span>
+                        </div>
+                        
+                        <!-- Content Layout -->
+                        <div class="flex items-center justify-between">
+                            <!-- Left Content -->
+                            <div class="flex-1">
+                                <h3 class="text-[20px] font-bold text-gray-900 mb-3">Italian Salad</h3>
+                                
+                                <div class="space-y-2 mb-6">
+                                    <p class="text-gray-500 text-[14px]">100 Calories</p>
+                                    <p class="text-gray-500 text-[14px]">4 persons</p>
+                                </div>
+                                
+                                <!-- Price and Button -->
+                                <div class="flex items-center space-x-4">
+                                    <p class="text-primary-orange text-[16px] font-bold">Rp. 25.000</p>
+                                    <button class="flex items-center justify-center hover:scale-110">
+                                        <img src="./images/icon/add.svg" alt="Add" class="w-5 h-5">
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Right Image -->
+                            <div class="ml-6">
+                                   
+                                    <img src="./images/italiansalad.svg" alt="" class="w-32 h-32  flex items-center justify-center relative overflow-hidden">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                s
+            </div>
+            
+        </div>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -150,18 +469,17 @@
             const textElements = sidebar.querySelectorAll('span:not([id^="tooltip-"])');
             const categoryLabels = sidebar.querySelectorAll('p.text-xs.font-semibold');
 
-            // PERUBAHAN: Mulai dengan collapsed di semua device (desktop dan mobile)
             let isExpanded = false;
 
             // Set initial collapsed state
             function setInitialState() {
                 // Sidebar collapsed
-                sidebar.classList.remove('w-64');
+                sidebar.classList.remove('w-52'); // Ganti w-50 dengan w-52
                 sidebar.classList.add('w-16');
                 sidebar.setAttribute('data-expanded', 'false');
                 
                 // Main content margin
-                mainContent.classList.remove('ml-64');
+                mainContent.classList.remove('ml-52'); // Ganti ml-50 dengan ml-52
                 mainContent.classList.add('ml-16');
                 
                 // Show hamburger, hide logo
@@ -183,7 +501,6 @@
                     el.classList.add('opacity-0', 'scale-0');
                 });
                 
-                // Hide close button and overlay
                 closeSidebar.classList.remove('opacity-100', 'scale-100');
                 closeSidebar.classList.add('opacity-0', 'scale-0');
                 overlay.classList.add('hidden');
@@ -195,12 +512,12 @@
                 if (isExpanded) {
                     // Expand sidebar
                     sidebar.classList.remove('w-16');
-                    sidebar.classList.add('w-64');
+                    sidebar.classList.add('w-52'); // Ganti w-50 dengan w-52
                     sidebar.setAttribute('data-expanded', 'true');
                     
                     // Update main content margin
                     mainContent.classList.remove('ml-16');
-                    mainContent.classList.add('ml-64');
+                    mainContent.classList.add('ml-52'); // Ganti ml-50 dengan ml-52
                     
                     // Change hamburger to logo
                     hamburgerIcon.classList.add('opacity-0');
@@ -221,23 +538,16 @@
                             el.classList.remove('opacity-0', 'scale-0');
                             el.classList.add('opacity-100', 'scale-100');
                         });
-                        
-                        // Show close button on mobile
-                        if (window.innerWidth < 1024) {
-                            closeSidebar.classList.remove('opacity-0', 'scale-0');
-                            closeSidebar.classList.add('opacity-100', 'scale-100');
-                            overlay.classList.remove('hidden');
-                        }
                     }, 150);
                     
                 } else {
                     // Collapse sidebar
-                    sidebar.classList.remove('w-64');
+                    sidebar.classList.remove('w-52'); // Ganti w-50 dengan w-52
                     sidebar.classList.add('w-16');
                     sidebar.setAttribute('data-expanded', 'false');
                     
                     // Update main content margin
-                    mainContent.classList.remove('ml-64');
+                    mainContent.classList.remove('ml-52'); // Ganti ml-50 dengan ml-52
                     mainContent.classList.add('ml-16');
                     
                     // Change back to hamburger icon
@@ -259,7 +569,6 @@
                         el.classList.add('opacity-0', 'scale-0');
                     });
                     
-                    // Hide close button and overlay
                     closeSidebar.classList.remove('opacity-100', 'scale-100');
                     closeSidebar.classList.add('opacity-0', 'scale-0');
                     overlay.classList.add('hidden');
@@ -274,15 +583,13 @@
             closeSidebar.addEventListener('click', toggleSidebarState);
             overlay.addEventListener('click', toggleSidebarState);
 
-            // Handle window resize - TIDAK AUTO EXPAND di desktop
+            // Handle window resize
             window.addEventListener('resize', function() {
                 if (window.innerWidth >= 1024) {
-                    // Desktop: Hide mobile elements tapi tetap biarkan user control expand/collapse
                     overlay.classList.add('hidden');
                     closeSidebar.classList.remove('opacity-100', 'scale-100');
                     closeSidebar.classList.add('opacity-0', 'scale-0');
                 } else {
-                    // Mobile: Auto collapse jika expanded
                     if (isExpanded) {
                         toggleSidebarState();
                     }
