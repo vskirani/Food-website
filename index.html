@@ -25,10 +25,10 @@
 
        @layer utilities {
             .font-poppins {
-                font-family: 'Poppins';
+                font-family: 'Poppins', sans-serif;
             }
             .font-fairplay {
-                font-family: 'Playfair Display';
+                font-family: 'Playfair Display', serif;
             }
             
         }
@@ -75,9 +75,9 @@
 
             <!-- Dashboard  -->
             <div class="px-4 mb-2 py-2">
-                <a href="#" class="flex items-center p-2 text-hotel-primary bg-orange-50 rounded-lg transition-colors group">
-                    <img src="./images/icon/Dashboard.svg" alt="" class="w-5 h-5">
-                    <span class="font-poppins text-[14px] text-gray font-regular ml-3 overflow-hidden ">Dashboard</span>
+                <a href="#" class="flex items-center p-2 text-primary-orange bg-orange rounded-lg transition-colors group">
+                    <img src="./images/icon/dashboard.svg" alt="" class="w-5 h-5">
+                    <span class="font-poppins text-[14px] text-blue font-medium ml-3 overflow-hidden">Dashboard</span>
                 </a>
             </div>
 
@@ -149,7 +149,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 p-6 ">
             
             <!-- div welcome -->
-            <div class="w-full h-52  lg:col-span-2 bg-white rounded-lg shadow-md p-10 relative overflow-hidden">
+            <div class="w-full  lg:col-span-2 bg-white rounded-lg shadow-md p-10 relative overflow-hidden">
                 <img src="./images/Banners.svg" alt="" class="absolute inset-0 w-full h-full object-cover rounded-lg">
                 <div class="relative z-10 text-left">
                     <p class="font-poppins text-[13px] font-small text-primary-orange">👑 Deal of the weekend</p>
@@ -159,8 +159,9 @@
                         <span class="text-primary-orange">FREE delivery</span> 
                         on every weekend.
                     </p>
-                    <button class="mt-4 bg-primary-orange text-white px-4 py-1 rounded-full text-[12px] hover:orange hover:shadow-xl hover:scale-105 active:scale-95">
+                    <button class="mt-4 bg-primary-orange text-white px-4 py-1 rounded-full text-[12px] hover:bg-secound-orange hover:shadow-xl hover:scale-105 active:scale-95 transition-all duration-300">
                         Check Menu
+                    </button>
                 </div>
             </div>
             
@@ -558,7 +559,7 @@
             </div>
 
             <!-- categories -->
-            <div class="w-full h-80  rounded-lg shadow-md p-6">
+            <div class="w-full rounded-lg shadow-md p-6">
                 <!-- Header -->
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="font-poppins text-xl font-bold text-primary-orange">Menu Category</h2>
